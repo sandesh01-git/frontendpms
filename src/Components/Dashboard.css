@@ -1,0 +1,15 @@
+.active {
+    background-color: #0d6efd;    
+    color: chartreuse;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0.225rem;
+  
+
+}
+a:hover{
+    color: chartreuse;
+}
