@@ -43,12 +43,12 @@ const Dashboard = () => {
                 <ul className="nav nav-pills flex-column mb-auto">
                   <li className="nav-item">
                     <NavLink
-                      to="/dashboard/home"
+                      to="/dashboard/"
                       className={({ isActive }) =>
                         isActive ? "active" : "inactive"
                       }
                     >
-                      Home
+                      UserDetails
                     </NavLink>
                   </li>
                   <NavLink
@@ -58,14 +58,6 @@ const Dashboard = () => {
                     }
                   >
                     Products
-                  </NavLink>
-                  <NavLink
-                    to="/dashboard/userLists"
-                    className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
-                    }
-                  >
-                    Users
                   </NavLink>
                 </ul>
                 <hr />
@@ -95,11 +87,7 @@ const Dashboard = () => {
                         New project...
                       </a>
                     </li> */}
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Settings
-                      </a>
-                    </li>
+
                     {/* <li>
                       <a className="dropdown-item" href="#">
                         Profile
@@ -109,9 +97,6 @@ const Dashboard = () => {
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      {/* <a className="dropdown-item" href="#">
-                        Sign out
-                      </a> */}
                       <Link
                         to="/"
                         className="dropdown-item"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../Components/Form.css";
+import img from "../Components/Images/sign.svg";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -34,39 +35,59 @@ const LoginForm = () => {
   }, []);
 
   return (
-    <section id="form">
-      <div className="login-box">
-        <form onSubmit={handleFormSubmit}>
-          <h1>LOGIN</h1>
-          <label htmlFor="">Email: </label>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <br />
-          <label htmlFor="">Password: </label>
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <br />
-          <button type="submit" value="submit" className="button3">
-            Login
-          </button>
-          <br />
-        </form>
-        <p className="formpa">
-          Don't have an account?
-          <Link to="/register" className="formpaa">
-            Register
-          </Link>
-        </p>
+    <section className="my-5" id="san">
+      <div className="first">
+        <div className="py-5">
+          <h2 className="text-center mb-5">LOGIN</h2>
+        </div>
+        <div className="container-fluid pb-5">
+          <div className="row">
+            <div id="height" className="col-lg-6 col-md-6 col-sm-12 mt-3 ">
+              <img src={img} style={{ width: "100%" }} alt="" />
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 mt-5 o ">
+              <form onSubmit={handleFormSubmit}>
+                <div className="form-group mt-5">
+                  <input
+                    className="mb-3 col-lg-6"
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <br />
+                </div>
+                <div className="form-group">
+                  <input
+                    className="mb-3 col-lg-6"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                  <br />
+                </div>
+
+                <button
+                  type="submit"
+                  value="submit"
+                  className="btn btn-success col-lg-6"
+                >
+                  Login
+                </button>
+              </form>
+
+              <p className="formpa mt-3 col-lg-6">
+                Don't have an account?
+                <Link to="/register" className="formpaa">
+                  Register
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

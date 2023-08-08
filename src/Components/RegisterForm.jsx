@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Components/Form.css";
-
+import img from "../Components/Images/sign.svg";
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
@@ -48,48 +48,78 @@ const RegisterForm = () => {
   };
 
   return (
-    <section id="form">
-      <div className="register-box ">
-        <form onSubmit={handleFormSubmit}>
-          <h1>Register</h1>
-          <label htmlFor="">Email: </label>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <br></br>
-          <label htmlFor="">Password: </label>
-          <input
-            type={`${show ? "text" : "password"}`}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassWord(e.target.value)}
-            required
-          />
-          {/* <span
-            onClick={() => {
-              setShow(!show);
-            }}
-          >
-            0
-          </span> */}
-          <br></br>
-          <label htmlFor="">Repassword: </label>
-          <input
-            type="password"
-            placeholder="Enter Password to confirm"
-            value={cpassword}
-            onChange={(e) => setCPassword(e.target.value)}
-            required
-          />
-          <br></br>
-          <button type="submit" value="submit" className="button3">
-            Register
-          </button>
-        </form>
+    <section className="my-5" id="san">
+      <div className="first">
+        <div className="py-5">
+          <h2 className="text-center">Register Form</h2>
+        </div>
+        <div className="container-fluid">
+          <div className="row">
+            <div id="height" className="col-lg-6 col-md-6 col-sm-12 mt-3">
+              <img src={img} style={{ width: "100%" }} />
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 mt-5 ">
+              <form onSubmit={handleFormSubmit}>
+                <div className="form-group ">
+                  <input
+                    className="mb-3 col-lg-6"
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <br />
+                </div>
+                <div className="form-group">
+                  <input
+                    className="mb-3 col-lg-6"
+                    type={show ? "text" : "password"}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassWord(e.target.value)}
+                    required
+                  />
+                  {/* <span
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                >
+                  0
+                </span> */}
+                  <br />
+                </div>
+
+                <div className="form-group">
+                  <input
+                    className="mb-3 col-lg-6"
+                    type="password"
+                    placeholder="Enter Password to confirm"
+                    value={cpassword}
+                    onChange={(e) => setCPassword(e.target.value)}
+                    required
+                  />
+                  <br />
+                </div>
+
+                <button
+                  type="submit"
+                  value="submit"
+                  className="btn btn-success col-lg-6"
+                >
+                  Register
+                </button>
+              </form>
+
+              <p className="formpa mt-3 col-lg-6">
+                Already have an account?
+                <Link to="/" className="formpaa">
+                  LogIn
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
