@@ -5,7 +5,7 @@ import img from "../Components/Images/user.png";
 const Dashboard = () => {
   const sidebarStyle = {
     width: "100%",
-    height: "100vh",
+    height: "100%",
   };
   const navigate = useNavigate();
 
@@ -22,10 +22,10 @@ const Dashboard = () => {
 
   return (
     <>
-      <section id="sidedash">
-        <div classNameName="row">
-          <div classNameName=" ">
-            <div classNameName="header">
+      <section id="sidedash " style={{ height: "100%" }}>
+        <div classNameName="row " style={{ height: "100%" }}>
+          <div classNameName=" " style={{ height: "100%" }}>
+            <div classNameName="header" style={{ height: "100%" }}>
               <div
                 className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
                 style={sidebarStyle}

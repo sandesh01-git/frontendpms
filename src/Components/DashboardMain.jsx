@@ -5,7 +5,6 @@ import { Outlet } from "react-router-dom";
 const DashboardMain = () => {
   const style = {
     width: "300px",
-    height: "100%",
   };
   return (
     <>
